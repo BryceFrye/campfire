@@ -1,0 +1,140 @@
+#users_container{
+	float: left;
+	width: 200px;
+	height: 300px;
+	padding: 10px;
+}
+
+.conversation{
+	height: 300px;
+	width: 390px;
+	border: 1px solid;
+	padding: 0 5px 0 5px;
+	margin: 0 0 5px 0;
+	overflow: auto;
+	background-color: white;
+}
+
+#loading_container{
+  text-align: center;
+  margin: 40px;
+}
+
+#main_container{
+  margin: 0 20px 0 20px;
+}
+
+#right_container{
+  position: absolute;
+  top: 30px;
+  left: 250px;
+}
+
+#tabs_container{
+  float: left;
+}
+
+.username_blue{
+	color: blue;
+}
+
+.username_black{
+	color: black;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.chat_room{
+  background-color: ghostwhite;
+  float: left;
+  clear: left;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  display: none;
+  min-width: 400px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#new_room_button{
+  float: right;
+}
+
+.visible{
+  display: block;
+}
+
+.chatroom_users{
+  float: left;
+  width: 200px;
+  margin: 0 0 10px 0;
+}
+
+#conversation_container{
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.media_container{
+  float: right;
+  clear: left;
+}
+
+.data{
+  width: 329px;
+}
+
+.data_send{
+	margin: 0 0 5px 0;
+}
+
+.media_url{
+  width: 286px;
+}
+
+.media_link{
+ cursor: pointer;
+ color: blue;
+ text-decoration: underline; 
+}
+
+#background_modal{
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, .87);
+  width: 100%;
+  height: 100%;
+}
+
+.info_modal{
+  display: none;
+	background-color: transparent;
+	color: white;
+  position: relative;
+  top: 110px;
+  width: 100%;
+  text-align: center;
+  font-size: 70px;
+}
+
+.info_modal_name{
+  width: 90%;
+  text-align: center;
+  margin: 50px 0 25px 0;
+  background-color: transparent;
+	color: white;
+	border: none;
+	outline: none;
+	font-size: 70px;
+}
+
+.info_modal_error{
+  display: none;
+  color: red;
+  font-size: 26px;
+}

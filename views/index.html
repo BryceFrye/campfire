@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Koutani Campfire</title>
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css" >
+<link rel="stylesheet" href="/stylesheets/jquery-ui.css" />
+<link rel="stylesheet" href="/stylesheets/main.css" />
+</head>
+<body>
+<div id="loading_container">
+  <h1>Connecting to the server. Please wait.</h1>
+</div>
+<div id="main_container" style="display:none;">
+  <div id="users_container">
+    <h3><span id="user_count"></span> online</h3>
+    <div id="users"></div>
+  </div>
+  <div id="right_container">
+    <div id="tabs_container">
+      <ul class="nav nav-tabs">
+        <li id="active_chat_rooms" class="active">
+          <a href="#">Active Chat Rooms</a>
+        </li>
+      </ul>
+    </div>
+    <div id="active_chat_rooms" class="chat_room visible">
+      <div id="chatroom_list">
+        <h3>Existing Rooms</h3>
+        <div id="rooms"></div>
+      </div>
+      <button id="new_room_button" class="btn btn-success">Start A New Room</button>
+    </div>
+  </div>
+</div>
+
+<div id="background_modal">
+	<div id="signin_modal" class="info_modal">
+	  <p>What's your name?</p>
+	  <input id="signin_name" class="info_modal_name" />
+	  <p id="signin_error" class="info_modal_error">Sorry, this username is already taken.</p>
+	</div>
+	<div id="new_room_modal" class="info_modal">
+	  <p>Name your new chatroom:</p>
+	  <input id="new_room_name" class="info_modal_name" />
+	  <p id="new_room_error" class="info_modal_error">Sorry, this name is already taken.</p>
+	</div>
+</div>
+
+<script id='tab_template' type='text/template'>
+  <li id="room_<%= room %>">
+    <a href='#'><%= room_name %> <button data-room_name="<%= room_name %>" id="room_<%= room %>" class="btn btn-mini">X</button></a
+  </li>
+</script>
+
+<script id='chatroom_template' type='text/template'>
+  <div id="room_<%= room %>" class="chat_room">
+    <h5>Members</h5>
+    <div id="room_<%= room %>" class="chatroom_users"></div>
+    <div id="conversation_container">
+      <div id="room_<%= room %>" class="conversation"></div>
+      <input class="data" id="room_<%= room %>" />
+      <input type="button" class="btn data_send" id="room_<%= room %>" value="Send" /><br />
+      <input class="media_url" id="room_<%= room %>" placeholder="Enter an image or gif url here." />
+      <input type="button" class="btn media_send" id="room_<%= room %>" value="Send Media" />
+    </div>
+    <div class="media_container" id="room_<%= room %>"></div>
+  </div>
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/jquery-ui.min.js"></script>
+<script src="/javascripts/underscore.min.js"></script>
+<script src="/javascripts/main.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+</body>
+</html>
